@@ -1,0 +1,40 @@
+<html>
+<body>
+
+	<style type="text/css">
+		#box{
+			display: block;
+			color: #ffffff;
+			-webkit-border-radius: 20px;
+			opacity:0.6;
+			background: red;
+			-webkit-transition:-webkit-transform 1s, opacity 1s,
+			background 2s,width 2s, height 2s;
+		}
+		#box:hover{
+			-webkit-transform: rotate(360deg);
+			opacity:1;
+			background: #1ec7e6;       
+		}
+	</style>
+	<input id = "box" type = "button" value = "Submit" onclick = "server()">
+	<script type="text/javascript">
+		function server()
+		{
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET","http://localhost:8081/message.txt", true);
+			xmlhttp.onreadystatechange=function(){
+				if (xmlhttp.readyState==4 && xmlhttp.status==200){
+					string=xmlhttp.responseText;
+					document.getElementById("message").innerHTML = string;
+				}
+			}
+			xmlhttp.send();
+		}
+	</script>
+	<div id = "message"></div>
+
+</form>
+
+</body>
+</html>

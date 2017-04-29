@@ -4,10 +4,14 @@ A simple Web Messaging service in which a user will access a specific URL (http:
 
 Installation
 
-sudo apt-get update sudo apt-get install nodejs sudo apt-get install npm
+sudo apt-get update 
+sudo apt-get install nodejs 
+sudo apt-get install npm
 
 Running
 
-Open terminal in your project directory and start node server by following command node server.js
+Open terminal in your project directory and start node server by following command 
+node server.js
 
-Open google chrome and enter following URL http://localhost:8081/index.html
+Open google chrome and enter following URL 
+http://localhost:8081/index.html
